@@ -1,6 +1,6 @@
 clear
 clc
-%% ¸ê®Æ¾ã²z ÅÜ¼Æ³]©w
+%% è³‡æ–™æ•´ç† è®Šæ•¸è¨­å®š
 load('iris.txt')
 dataSet = load('iris.txt');
 x = dataSet([51:150],[3,4]);
@@ -15,7 +15,7 @@ pos = find(y == 1);
 neg = find(y == 0);
 S = find(y==1 | y==0);
 
-%% Newton' method ­¡¥N10¦¸
+%% Newton' method è¿­ä»£10æ¬¡Â¸
 for iterations = 1:10
     P = sigmoid(x * w);   
    
@@ -28,7 +28,7 @@ for iterations = 1:10
     w = w + inv(F)*delta_L';
 end
 
-%% µe¹Ï
+%% ç•«åœ–
 figure
 plot(0:9, L, 'o-')
 xlabel('Number of iterations')
